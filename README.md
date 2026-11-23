@@ -1,1 +1,1 @@
-# See https://github.com/sisaku-security/sisakulint
+# See https://github.com/gh-intel/sisakulint , https://gh-intel.github.io/lint
