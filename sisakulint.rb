@@ -5,20 +5,20 @@ require_relative "strategy" # typed: false
 class Sisakulint < Formula
   desc "Support tools for GitHub Actions workflow files"
   homepage "https://github.com/gh-intel/sisakulint"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.0/sisakulint_0.4.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "22410ee7f1ea1546d1a4553f033b3479957d11ea3502ef377f56d18a09f5e000"
+      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.1/sisakulint_0.4.1_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "258e28cd9c536f2f302f849913902d2cafe06754523bbd9001af60a77d573241"
 
       define_method(:install) do
         bin.install "sisakulint"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.0/sisakulint_0.4.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "31533521565b79056ff5fb738c71ff31c36e6cef561353cc82e71e1438e912e3"
+      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.1/sisakulint_0.4.1_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "141038f28baf63f181625e3b3af2e78205949aed1b141e64a7f4ce65f92d5607"
 
       define_method(:install) do
         bin.install "sisakulint"
@@ -28,22 +28,22 @@ class Sisakulint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.0/sisakulint_0.4.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e6d80959646fce8a17ff5a5b9eddf35a770a22b867383ca1e823f421084b18b9"
+      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.1/sisakulint_0.4.1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e5f0d6aa5d4633941e0d1fcad5595a6c40da09fb0c8d7b5b1fd6f4ac42a112a6"
       define_method(:install) do
         bin.install "sisakulint"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.0/sisakulint_0.4.0_linux_armv6.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "77dede26955b209fb8de93df42cad9fb4ad753d6fee1aa22119059da4b2320fa"
+      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.1/sisakulint_0.4.1_linux_armv6.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "8f93f8494dc41b106a54e7d8037c1e405dd9aaca64dc86a484ab210c9b19f98b"
       define_method(:install) do
         bin.install "sisakulint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.0/sisakulint_0.4.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "45e1aa5600c926df120ecad127dc82f36659ae3008eba9e359a5b0832120b0f8"
+      url "https://github.com/gh-intel/sisakulint/releases/download/v0.4.1/sisakulint_0.4.1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "74f5552fccfe6549b4f8d5862bf055793c9957552a5ffcaf8abd5a5bd7dfe7a4"
       define_method(:install) do
         bin.install "sisakulint"
       end
